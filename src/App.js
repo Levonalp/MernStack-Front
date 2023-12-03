@@ -9,6 +9,7 @@ import Modal from "react-bootstrap/Modal";
 
 // load api
 import { GoogleMap, useLoadScript } from "@react-google-maps/api";
+const PORT = process.env.PORT;
 
 const App = () => {
   const [post, setPost] = useState([]);
@@ -30,7 +31,7 @@ const App = () => {
   // routes
   const getPost = () => {
     axios
-      .get("https://mernstack-front-99yd.onrender.com")
+      .get("https://mernstack-front-99yd.onrender.com/twitter" || PORT)
       .then(
         (response) => setPost(response.data),
         (err) => console.log(err)
@@ -40,7 +41,7 @@ const App = () => {
 
   const handleCreate = (data) => {
     axios
-      .post("https://mernstack-front-99yd.onrender.com", data)
+      .post("https://mernstack-front-99yd.onrender.com/twitter/" || PORT, data)
       .then((response) => {
         console.log(response);
         getPost();
@@ -50,7 +51,10 @@ const App = () => {
 
   const handleEdit = (data) => {
     axios
-      .put("https://mernstack-front-99yd.onrender.com" + data._id, data)
+      .put(
+        "https://mernstack-front-99yd.onrender.com/twitter/" || PORT + data._id,
+        data
+      )
       .then((response) => {
         let newPost = post.map((post) => {
           return post._id !== data._id ? post : data;
@@ -61,7 +65,10 @@ const App = () => {
 
   const handleDelete = (deletedPost) => {
     axios
-      .delete("https://mernstack-front-99yd.onrender.com" + deletedPost._id)
+      .delete(
+        "https://mernstack-front-99yd.onrender.com/twitter/" ||
+          PORT + deletedPost._id
+      )
       .then((response) => {
         getPost();
       });
