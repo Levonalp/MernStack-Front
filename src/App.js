@@ -219,30 +219,3 @@ const App = () => {
 };
 
 export default App;
-
-{
-  /* <div className="register-page">
-      <div className="register-container">
-        <h3>Register</h3>
-        <div className="register-form">
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="username">Username:</label>
-            <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} />
-            <box-icon name="user" color="white"></box-icon>
-            <br />
-            <br />
-            <label htmlFor="password">Password:</label>
-            <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            <box-icon name="lock-alt" color="white"></box-icon>
-            <br />
-            <button type="submit">Register</button>
-            <br />
-            {message && <p>{message}</p>}
-          </form>
-          <span>
-            Have an account already? <Link to="/">Login page</Link>
-          </span>
-        </div>
-      </div>
-    </div> */
-}
