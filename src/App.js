@@ -30,7 +30,7 @@ const App = () => {
   // routes
   const getPost = () => {
     axios
-      .get("http://localhost:4000/")
+      .get("https://mernstack-front-99yd.onrender.com")
       .then(
         (response) => setPost(response.data),
         (err) => console.log(err)
@@ -39,25 +39,29 @@ const App = () => {
   };
 
   const handleCreate = (data) => {
-    axios.post("http://localhost:4000/", data).then((response) => {
-      console.log(response);
-      getPost();
-      showPostP();
-    });
+    axios
+      .post("https://mernstack-front-99yd.onrender.com", data)
+      .then((response) => {
+        console.log(response);
+        getPost();
+        showPostP();
+      });
   };
 
   const handleEdit = (data) => {
-    axios.put("http://localhost:4000/" + data._id, data).then((response) => {
-      let newPost = post.map((post) => {
-        return post._id !== data._id ? post : data;
+    axios
+      .put("https://mernstack-front-99yd.onrender.com" + data._id, data)
+      .then((response) => {
+        let newPost = post.map((post) => {
+          return post._id !== data._id ? post : data;
+        });
+        setPost(newPost);
       });
-      setPost(newPost);
-    });
   };
 
   const handleDelete = (deletedPost) => {
     axios
-      .delete("http://localhost:4000/" + deletedPost._id)
+      .delete("https://mernstack-front-99yd.onrender.com" + deletedPost._id)
       .then((response) => {
         getPost();
       });
