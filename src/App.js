@@ -31,7 +31,7 @@ const App = () => {
   // routes
   const getPost = () => {
     axios
-      .get("https://mernstack-front-99yd.onrender.com" || PORT)
+      .get("https://mernstack-back-v8a5.onrender.com/" || PORT)
       .then(
         (response) => setPost(response.data),
         (err) => console.log(err)
@@ -41,7 +41,7 @@ const App = () => {
 
   const handleCreate = (data) => {
     axios
-      .post("https://mernstack-front-99yd.onrender.com" || PORT, data)
+      .post("https://mernstack-back-v8a5.onrender.com/" || PORT, data)
       .then((response) => {
         console.log(response);
         getPost();
@@ -52,7 +52,7 @@ const App = () => {
   const handleEdit = (data) => {
     axios
       .put(
-        "https://mernstack-front-99yd.onrender.com/" || PORT + data._id,
+        "hhttps://mernstack-back-v8a5.onrender.com/" || PORT + data._id,
         data
       )
       .then((response) => {
@@ -66,7 +66,7 @@ const App = () => {
   const handleDelete = (deletedPost) => {
     axios
       .delete(
-        "https://mernstack-front-99yd.onrender.com/" || PORT + deletedPost._id
+        "https://mernstack-back-v8a5.onrender.com/" || PORT + deletedPost._id
       )
       .then((response) => {
         getPost();
