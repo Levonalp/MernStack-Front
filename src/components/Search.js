@@ -1,13 +1,13 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 const Search = ({ onSearchChange }) => {
-  const [searchInput, setSearchInput] = useState('')
+  const [searchInput, setSearchInput] = useState("");
 
   const handleSearchChange = (e) => {
-    e.preventDefault()
-    setSearchInput(e.target.value)
-    onSearchChange(e.target.value)
-  }
+    e.preventDefault();
+    setSearchInput(e.target.value);
+    onSearchChange(e.target.value);
+  };
   return (
     <div className="searchBarContainer ">
       <input
@@ -18,7 +18,7 @@ const Search = ({ onSearchChange }) => {
         onChange={handleSearchChange}
       />
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

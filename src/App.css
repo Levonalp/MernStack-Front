@@ -1,38 +1,42 @@
-.App {
+.app {
+  background-color: black;
+  color: gold;
+}
+
+.navbar {
+  /* Navbar styling */
+}
+
+.home-page, .posts-page {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.post-container {
+  margin: auto;
+  max-width: 600px; /* Instagram-like post width */
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.post-actions {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.post-actions button {
+  background-color: gold;
+  border: none;
+  color: black;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.post-actions button:hover {
+  background-color: darkgoldenrod;
 }
+
+/* Additional styling */

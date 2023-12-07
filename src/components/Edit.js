@@ -1,42 +1,70 @@
-import { useState } from 'react'
+import React, { useState, useEffect } from "react";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 
-const Edit = (props) => {
-  const [post, setPost] = useState({ ...props.post })
+const Edit = ({ show, handleClose, postToEdit, handleEdit }) => {
+  const [post, setPost] = useState({ ...postToEdit });
+
+  useEffect(() => {
+    setPost({ ...postToEdit });
+  }, [postToEdit]);
 
   const handleChange = (event) => {
-    setPost({ ...post, [event.target.name]: event.target.value })
-  }
+    setPost({ ...post, [event.target.name]: event.target.value });
+  };
 
   const handleSubmit = (event) => {
-    event.preventDefault()
-    props.handleEdit(post)
-  }
+    event.preventDefault();
+    handleEdit(post);
+    handleClose();
+  };
 
   return (
-    <div>
-      <details>
-        <summary>Edit Post</summary>
-
+    <Modal show={show} onHide={handleClose}>
+      <Modal.Header closeButton>
+        <Modal.Title>Edit Post</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="location">location : </label>
-          <input type="text" name="location" onChange={handleChange} value={post.location} />
+          <label htmlFor="location">Location: </label>
+          <input
+            type="text"
+            name="location"
+            onChange={handleChange}
+            value={post.location || ""}
+          />
           <br />
+          <label htmlFor="post">Post: </label>
+          <input
+            type="text"
+            name="post"
+            onChange={handleChange}
+            value={post.post || ""}
+          />
           <br />
-          <label htmlFor="post">Post : </label>
-          <input type="text" name="post" onChange={handleChange} value={post.post} />
+          <label htmlFor="date">Date: </label>
+          <input
+            type="date"
+            name="date"
+            onChange={handleChange}
+            value={post.date || ""}
+          />
           <br />
+          <label htmlFor="img">Image: </label>
+          <input
+            type="text"
+            name="img"
+            onChange={handleChange}
+            value={post.img || ""}
+          />
           <br />
-          <label htmlFor="date">date : </label>
-          <input type="date" name="date" onChange={handleChange} value={post.date} />
-          <br></br>
-          <label htmlFor="img">Image : </label>
-          <input type="text" name="img" onChange={handleChange} value={post.img} />
-          <br></br>
-          <input type="submit" />
+          <Button variant="primary" type="submit">
+            Save Changes
+          </Button>
         </form>
-      </details>
-    </div>
-  )
-}
+      </Modal.Body>
+    </Modal>
+  );
+};
 
-export default Edit
+export default Edit;
