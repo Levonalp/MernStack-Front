@@ -4,18 +4,48 @@
 }
 
 .navbar {
-  /* Navbar styling */
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: gold;
+  padding: 10px 20px;
 }
 
-.home-page, .posts-page {
-  text-align: center;
+.hamburger-menu button {
+  background: gold;
+  color: black;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.home-button {
+  background: none;
+  border: none;
+  color: gold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.searchBarContainer {
+  margin-left: auto;
+  color: gold;
+}
+
+.searchBarContainer input {
+  color: black;
+  background-color: gold;
+  border: none;
+  padding: 5px 10px;
 }
 
 .post-container {
   margin: auto;
-  max-width: 600px; /* Instagram-like post width */
+  max-width: 600px;
   background-color: white;
   margin-bottom: 20px;
+  color: black;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -28,15 +58,11 @@
 
 .post-actions button {
   background-color: gold;
-  border: none;
   color: black;
+  border: none;
   padding: 5px 15px;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.post-actions button:hover {
-  background-color: darkgoldenrod;
-}
-
-/* Additional styling */
+/* Additional styles as needed */
