@@ -22,7 +22,7 @@ const Post = (props) => {
     <>
       <div className="card text-center" style={{ width: "45rem" }}>
         <h5
-          className="location-link"
+          className="location-links"
           onClick={() => {
             setShowModal(!showModal);
           }}
