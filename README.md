@@ -1,4 +1,4 @@
-\
+
 # City Book
 
 City Book is a web application that showcases users' favorite cities, offering a platform to view, add, edit, and delete city information. This application is built using the MERN stack (MongoDB, Express.js, React, and Node.js) and leverages React Bootstrap for UI components.
