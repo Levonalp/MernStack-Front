@@ -1,8 +1,4 @@
-
-Certainly! Here's an updated README.md for your project "City Book" tailored to the specific repository URLs you provided. You can copy and paste this into your GitHub repository:
-
-markdown
-Copy code
+\
 # City Book
 
 City Book is a web application that showcases users' favorite cities, offering a platform to view, add, edit, and delete city information. This application is built using the MERN stack (MongoDB, Express.js, React, and Node.js) and leverages React Bootstrap for UI components.
@@ -31,15 +27,15 @@ City Book is a web application that showcases users' favorite cities, offering a
    git clone https://github.com/Levonalp/MernStack-Front.git
 Navigate to the project directory
 sh
-Copy code
+
 cd MernStack-Front
 Install NPM packages
 sh
-Copy code
+
 npm install
 Start the server
 sh
-Copy code
+
 npm start
 Usage
 After starting the server, navigate to http://localhost:3000 in your web browser to view the application.
