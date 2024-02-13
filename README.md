@@ -10,7 +10,7 @@ City Book is a web application that showcases users' favorite cities, offering a
 - **Edit City Information**: Users can edit the details of existing cities.
 - **Delete Cities**: Allows for the removal of cities from the list.
 - **Search Functionality**: Users can search for cities based on their names or descriptions.
-- **Responsive Design**: Ensures a seamless experience across various devices.
+- **Responsive Design**: Ensures a seamless experience across various devices
 
 ## Getting Started
 
